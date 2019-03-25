@@ -17,9 +17,9 @@ class SingleBook extends Component {
   render() {
     console.log(this.props);
     return (
-      <React.Fragment>
+      <>
         {Object.keys(this.state.bookData).length ? JSON.stringify(this.state.bookData, null, 2) : ""}
-      </React.Fragment>
+      </>
     )
   }
 }

@@ -50,7 +50,7 @@ class Search extends Component {
   saveBook = bookId => {
     // find book in this.state.booksList based on the bookId value
     const bookPicked = this.state.booksList.find(book => book.bookId === bookId);
-    console.log(bookPicked);
+    //console.log(bookPicked);
     API.create(bookPicked)
       .then(res => {
         console.log(res.data);
@@ -93,7 +93,7 @@ class Search extends Component {
             {/* begin book result section */}
             <div className="col-12 col-sm-6 col-md-9">
               {!this.state.booksList.length ? (
-                <h2 className="text-center">Search For a Book</h2>
+                <h2 className="text-center">Search Results</h2>
               ) : (
                 <>
                   <h3>Search Results for: {this.state.searchTerm}</h3>
